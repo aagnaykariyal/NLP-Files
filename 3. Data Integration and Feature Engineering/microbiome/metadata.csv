@@ -1,0 +1,10 @@
+BARCODE,GROUP,SAMPLE
+MID1,EXTRACTION CONTROL,NA
+MID2,NEC 1,tissue
+MID3,Control 1,tissue
+MID4,NEC 2,tissue
+MID5,Control 2,tissue
+MID6,NEC 1,stool
+MID7,Control 1,stool
+MID8,NEC 2,stool
+MID9,Control 2,stool

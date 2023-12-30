@@ -1,0 +1,120 @@
+Yacht_Name,Yacht_Make,Yacht_Ref,Depart_Port,Depart_Country,Built,Length(m),Cabins,Toilets,Guests,Day_Rate
+Adriatic Star,Balandro Calypso 45,SY001,Pavao Island Marina,Croatia,2013,13.85,4,2,10,656
+Amber Sunrise,Benedetti 37 Mirage,SY002,Pavao Island Marina,Croatia,2014,11.3,3,1,8,431
+Anne Elizabeth,Marchal Grande 410,SY003,Port Djurak,Croatia,2016,12.35,3,2,8,486
+Aqua Calma,Benedetti 37 Mirage,SY004,Marina Naupotiri,Greece,2007,11.35,3,1,8,377
+Arizona Challenger,Marchal Grande 382,SY005,Pavao Island Marina,Croatia,2016,11.23,3,2,8,423
+Ava Maria,Marchal Grande 460,SY006,Port Djurak,Croatia,2017,14.15,4,4,10,626
+Balkan Endeavour,Hispanic Classic 115,SY007,Branimir Marina,Italy,2005,35.05,6,3,14,1500
+Beach Comber ,Sevier Luna 450,SY008,Port Djurak,Croatia,2013,13.96,6,4,14,1167
+Bella Donna,Benedetti 38 Mirage,SY009,Marina Naupotiri,Greece,2005,12.13,3,1,7,339
+Bello Vento,Marchal Grande 430,SY010,Branimir Marina,Italy,2019,13.24,4,2,10,675
+Blue Diamond,Sevier Luna 450,SY011,Port Djurak,Croatia,2013,13.96,6,4,12,1229
+Blue Rhapsody,Neumann 385 Opus,SY012,Port Djurak,Croatia,2013,11.4,3,1,8,431
+Bohemian Princess,Hanse 455,SY013,Marina Naupotiri,Greece,2017,13.95,4,2,10,623
+Born Free,Balandro Calypso 37,SY014,Marina Naupotiri,Greece,2012,11.48,3,1,8,431
+Calamity Jane,Marchal Grande 360,SY015,Marina Vitus,Croatia,2018,10.28,3,1,8,393
+Calico Sky,Balandro Calypso 51.1,SY016,Port Djurak,Croatia,2018,15.94,6,3,12,814
+Calypso Queen,Benedetti 49 Mirage,SY017,Marina Naupotiri,Greece,2004,15.4,5,3,11,621
+Chelsea Girl,Sevier Luna 400,SY018,Pavao Island Marina,Croatia,2014,11.97,6,4,12,886
+Cassiopeia Rising,Benedetti 45 Mirage,SY019,Port Djurak,Croatia,2011,14.27,4,3,9,640
+Celtic Pride,Benedetti 46 Mirage,SY020,Marina Naupotiri,Greece,2007,14.4,4,2,8,566
+Caribbean Queen,Benedetti 38 Mirage,SY021,Pavao Island Marina,Croatia,2009,11.72,3,1,8,400
+Chimera Gold,Marchal Grande 460,SY022,Pavao Island Marina,Croatia,2016,14.15,4,4,12,626
+Christobelle Minstrel,Benedetti 41 Mirage,SY023,Marina Vitus,Croatia,2014,12.35,3,2,7,479
+Cinco De Mayo,Bodega Dream Weaver 439,SY024,Marina Naupotiri,Greece,2012,13.34,4,2,10,640
+Clandehoye,Benedetti 46 Alto,SY025,Pavao Island Marina,Croatia,2007,14.4,4,2,9,566
+Clear Horizons,Marchal Grande 410,SY026,Pavao Island Marina,Croatia,2016,12.35,3,2,8,457
+Club Tropicana,Neumann 415 Opus,SY027,Marina Vitus,Croatia,2013,12.4,3,2,8,479
+Cordelia Marie,Marchal Grande 412,SY028,Port Djurak,Croatia,2017,12.7,3,2,8,464
+Crystal Serenity,Balandro Calypso 35.1,SY029,Port Djurak,Croatia,2018,10.45,3,1,8,393
+Dakota Dream,Benedetti 49 Mirage,SY030,Pavao Island Marina,Croatia,2003,15.4,5,3,11,621
+Day Dreamer,Marchal Grande 410,SY031,Marina Naupotiri,Greece,2016,12.35,3,2,10,457
+Freedom Hunter,Bodega Dreamer 53,SY032,Marina Naupotiri,Greece,2011,16.06,6,3,12,814
+Diamond Life,Benedetti 36 Mirage,SY033,Port Djurak,Croatia,2005,11.4,3,1,8,324
+Divine Grace,Benedetti 38 Mirage,SY034,Pavao Island Marina,Croatia,2004,12.13,3,1,7,339
+Dolce Vita,Hanse 455,SY035,Branimir Marina,Italy,2017,13.95,4,2,10,623
+Emerald Dynasty,Neumann 345 Opus,SY036,Port Djurak,Croatia,2014,10.4,3,1,8,389
+Pacific Endeavour,Bodega Dream Weaver 138,SY037,Branimir Marina,Italy,2020,42.6,8,4,18,1743
+Esperanza II,Sevier Luna 450,SY038,Marina Vitus,Croatia,2013,13.96,6,4,12,1229
+Espirt De Mar,Benedetti 36 Mirage,SY039,Marina Vitus,Croatia,2005,11.4,3,1,8,324
+Fantasyland,Marchal Grande 360,SY040,Port Djurak,Croatia,2018,10.28,3,1,8,393
+Flying Clipper,Neumann 415 Opus,SY041,Port Djurak,Croatia,2014,12.4,3,2,10,479
+Free Spirit,Bodega Dreamer 53,SY042,Pavao Island Marina,Croatia,2013,16.06,6,3,12,814
+Della Odissea,Benedetti 46 Mirage,SY043,Port Djurak,Croatia,2008,14.4,4,2,8,574
+Galway Girl,Benedetti 46 Mirage,SY044,Port Djurak,Croatia,2008,14.4,4,2,9,574
+Gold Dust,Marchal Grande 382,SY045,Port Djurak,Croatia,2017,11.23,3,2,8,440
+Golden Fleece,Balandro Calypso 38.1,SY046,Port Djurak,Croatia,2018,11.5,3,2,8,440
+Golden Medusa,Neumann 505 Opus,SY047,Marina Naupotiri,Greece,2015,15.4,5,2,12,799
+Gracious Lady,Benedetti 37 Mirage,SY048,Marina Vitus,Croatia,2014,11.3,3,1,8,431
+Gumbo Flyer,Neumann 385 Opus,SY049,Marina Naupotiri,Greece,2015,11.4,3,1,8,431
+Halcyon Days,Balandro Calypso 41.1,SY050,Marina Naupotiri,Greece,2019,13.24,4,2,10,545
+Havana Moon,Benedetti 46 Alto,SY051,Marina Vitus,Croatia,2008,14.4,4,2,9,574
+Heather Rae,Marchal Grande 410,SY052,Pavao Island Marina,Croatia,2016,12.35,3,2,8,457
+Irish Rose,Balandro Calypso 35.1,SY053,Branimir Marina,Italy,2018,10.45,3,1,8,396
+Island Escape,Benedetti 46 Mirage,SY054,Marina Naupotiri,Greece,2006,14.4,4,2,9,551
+Island Jewel,Neumann 418 Opus,SY055,Port Djurak,Croatia,2018,12.4,3,2,8,474
+Island Roamer IV,Benedetti 44 Mirage,SY056,Marina Vitus,Croatia,2004,13.95,4,2,8,450
+Jubliee Queen,Benedetti 37 Mirage,SY057,Pavao Island Marina,Croatia,2007,11.35,3,1,9,377
+Kanaloa Rose,Balandro Calypso 46,SY058,Marina Vitus,Croatia,2011,14.4,4,2,10,607
+Aurora Explorer,Sevier Luna 450S,SY059,Marina Vitus,Croatia,2018,13.96,6,4,12,1400
+Maisea Anne,Marchal Grande 460,SY060,Marina Naupotiri,Greece,2018,14.15,4,4,10,659
+Kitty Hawk,Benedetti 50 Mirage,SY061,Marina Naupotiri,Greece,2008,15.4,5,3,11,707
+La Bella Vita II,Balandro Calypso 41.1,SY062,Branimir Marina,Italy,2018,12.43,3,2,8,474
+Lady Helmsman,Benedetti 38 Mirage,SY063,Marina Vitus,Croatia,2004,12.13,3,1,7,339
+Lady Sabrina,Balandro Calypso 55,SY064,Port Djurak,Croatia,2013,16.78,6,3,12,999
+Lagoon Bay,Marchal Grande 350,SY065,Marina Naupotiri,Greece,2017,10.28,3,1,8,393
+Laguna Breeze,Marchal Grande 460,SY066,Pavao Island Marina,Croatia,2016,14.15,4,4,10,626
+Liberty Oasis,Hispanic 120,SY067,Pavao Island Marina,Croatia,2018,36.6,5,4,12,1828
+Sillas Marner,Marchal Grande 382,SY068,Marina Naupotiri,Greece,2016,11.23,3,2,8,423
+Magic Carpet,Benedetti 45 Mirage,SY069,Pavao Island Marina,Croatia,2012,14.27,4,3,9,640
+Kindred Spirit,Benedetti 46 Alto,SY070,Pavao Island Marina,Croatia,2006,14.4,4,2,9,551
+Mal De Mer III,Hanse 455,SY071,Branimir Marina,Italy,2015,13.95,4,2,10,623
+Margot Louisa,Benedetti 40 Alto,SY072,Port Djurak,Croatia,2009,12.35,3,2,7,437
+Memory Maker,Benedetti 37 Mirage,SY073,Marina Naupotiri,Greece,2006,11.35,3,1,8,370
+Mesnica Lorena,Benedetti 50 Mirage,SY074,Marina Vitus,Croatia,2006,15.4,5,3,11,707
+Monte Cristo,Benedetti 45 Mirage,SY075,Marina Vitus,Croatia,2012,14.27,4,3,9,640
+Moody Blues,Balandro Calypso 38.1,SY076,Marina Naupotiri,Greece,2018,11.5,3,2,8,440
+Mustang Sally,Neumann 445 Opus,SY077,Branimir Marina,Italy,2013,13.52,4,2,10,577
+Mystic Adventure,Benedetti 32 Mirage,SY078,Marina Vitus,Croatia,2004,10.3,2,1,4,243
+Mystical Spirit,Benedetti 46 Alto,SY079,Marina Naupotiri,Greece,2015,14.27,4,3,9,656
+Nordic Pearl,Benedetti 40 Mirage,SY080,Marina Naupotiri,Greece,2008,12.35,3,2,7,437
+Northern Enchantress,Sevier Luna 42,SY081,Pavao Island Marina,Croatia,2018,12.8,6,4,12,1057
+Sea Biscuit,Marchal Grande 460,SY082,Branimir Marina,Italy,2017,14.15,4,4,10,626
+Ocean Glory,Marchal Grande 512,SY083,Pavao Island Marina,Croatia,2017,15.2,5,2,12,774
+Ocean Harvester,Marchal Grande 460,SY084,Pavao Island Marina,Croatia,2016,14.15,4,4,10,659
+Opus One,Marchal Grande 350,SY085,Pavao Island Marina,Croatia,2017,10.28,3,1,8,393
+Orion Star,Marchal Grande 460,SY086,Marina Naupotiri,Greece,2016,14.15,4,4,10,659
+Osprey IV,Balandro Calypso 38.1,SY087,Pavao Island Marina,Croatia,2018,11.5,3,2,8,440
+Oyster Catcher,Neumann 415 Opus,SY088,Pavao Island Marina,Croatia,2013,12.4,3,2,8,479
+Palmetto Blues,Balandro Calypso 45,SY089,Marina Naupotiri,Greece,2013,13.85,4,2,10,656
+Papillon,Sevier Luna 400S2,SY090,Pavao Island Marina,Croatia,2014,11.97,6,4,12,886
+Pegasus Moon,Benedetti 50 Mirage,SY091,Port Djurak,Croatia,2007,15.4,5,3,11,707
+Seabreeze,Benedetti 37 Mirage,SY092,Marina Naupotiri,Greece,2006,11.35,3,1,8,370
+Purple Haze,Benedetti 44 Alto,SY093,Pavao Island Marina,Croatia,2004,13.95,4,2,9,450
+Quinta Essentia,Sevier Luna 400,SY094,Marina Naupotiri,Greece,2013,11.97,6,4,12,886
+Safe Harbour,Marchal Grande 521,SY095,Port Djurak,Croatia,2004,36.9,5,3,12,1563
+Sally Dawn,Balandro Calypso 45,SY096,Port Djurak,Croatia,2012,13.85,4,2,10,640
+Santana Marie,Marchal Grande 360,SY097,Port Djurak,Croatia,2018,10.28,3,1,8,400
+Scarlet Pimpernel,Sevier Luna 42,SY098,Marina Vitus,Croatia,2017,12.8,6,4,12,1057
+Ocean Breeze,Benedetti 44 Alto,SY099,Marina Naupotiri,Greece,2004,13.95,4,2,9,450
+Peregrine Falcon,Marchal Grande 382,SY100,Port Djurak,Croatia,2017,11.23,3,2,8,423
+Dalmatian Princess,Hispanic Diamond 144,SY101,Branimir Marina,Italy,2011,44,10,5,10,2091
+Serendipity,Sevier Luna 40,SY102,Branimir Marina,Italy,2019,11.74,6,4,12,950
+Silent Runner,Hispanic 93,SY103,Port Djurak,Croatia,2013,28.35,6,4,10,1571
+Silver Lady,Neumann 345 Opus,SY104,Marina Naupotiri,Greece,2014,10.4,3,1,8,389
+Singapore Sling,Benedetti 38 Mirage,SY105,Port Djurak,Croatia,2004,12.13,3,1,7,339
+Sonata Glory,Benedetti 50 Mirage,SY106,Pavao Island Marina,Croatia,2009,15.4,5,3,11,707
+Song of Joy,Benedetti 120  Alto,SY107,Marina Vitus,Croatia,2019,36.6,7,3,10,1810
+Songbird,Benedetti 30 Elite,SY108,Marina Naupotiri,Greece,2006,9.5,2,1,6,236
+Sovereign Grace,Oceano 431 Cruiser,SY109,Port Djurak,Croatia,1999,13.6,4,3,9,336
+Spirit of the Sea,Marchal Grande 460,SY110,Marina Naupotiri,Greece,2018,14.15,4,4,10,659
+Stellaluna,Benedetti 39 Mirage,SY111,Pavao Island Marina,Croatia,2006,12.2,3,2,7,401
+Sun Ambassador,Balandro Calypso 38,SY112,Port Djurak,Croatia,2015,11.5,3,2,8,440
+Sweet Caroline,Balandro Calypso 45,SY113,Port Djurak,Croatia,2013,13.85,4,2,10,640
+Sweet Harmony,Benedetti 44 Mirage,SY114,Port Djurak,Croatia,2004,13.95,4,2,9,450
+Triple Sycara V,Benedetti 51 Mirage,SY115,Pavao Island Marina,Croatia,2015,15.54,5,3,11,799
+Tropical Paradise,Neumann 445 Opus,SY116,Pavao Island Marina,Croatia,2013,13.52,4,2,10,640
+Uptown Girl,Balandro Calypso 37,SY117,Port Djurak,Croatia,2011,11.48,3,1,10,416
+Vista Mar,Benedetti 44 Alto,SY118,Marina Naupotiri,Greece,2002,13.95,4,2,8,413
+Vivaldi Empress,Marchal Grande 512,SY119,Port Djurak,Croatia,2017,15.2,5,2,12,774
