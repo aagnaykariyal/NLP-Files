@@ -4,7 +4,6 @@
 import json
 import re
 import pandas as pd
-from reddit import RedditClass  # Importing the reddit file
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -22,53 +21,15 @@ class Sentiment:
         self.text = "Sentiment Analysis"
         self.lemmatizer = WordNetLemmatizer()
 
-        # ------ Getting data from reddit --------
-
-        while True:
-            match input("Do you want to get new data? (Y/N) ").lower():
-                case 'y':
-                    reddit = RedditClass()
-                    with open('data.json', "w", newline='') as json_file:
-                        json.dump({'Data': reddit.redditapi()}, json_file)
-                    break
-                case "n":
-                    break
-                case _:
-                    print('Invalid input, Try again.')
-
-        while True:
-            match input('Do you want to get the sentiments of the data? ').lower():
-                case 'y':
-                    self.run_sentiments()
-                    break
-                case "n":
-                    break
-                case _:
-                    print('Invalid input, Try again.')
-
-        while True:
-            match input('Do you want to run the model? ').lower():
-                case 'y':
-                    self.run_model()
-                    break
-                case "n":
-                    break
-                case _:
-                    print('Invalid input, Try again.')
-
-    # ---------- Sentiment Analysis ----------
+        self.tokenizer = AutoTokenizer.from_pretrained('cardiffnlp/twitter-roberta-base-sentiment')
+        self.model = AutoModelForSequenceClassification.from_pretrained('cardiffnlp/twitter-roberta-base-sentiment')
 
     def sentiment(self, sent):
-        tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
-        model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
-
-        tokens = tokenizer.encode(sent, return_tensors='pt')
-        result = model(tokens)  # Returns a tensor which consists of the probabilities of all the possibilities of
-        # sentiment from 1 to 5.
-        # print(result)
+        tokens = self.tokenizer.encode(sent, return_tensors='pt')
+        result = self.model(tokens)
+        # Returns a tensor which consists of the probabilities of all the possibilities of sentiment from 1 to 3.
         '''From printing the result we can see that sentiment 1/bad sentiment has the probability of 3.1262 and is the 
         highest sentiment. Lets see how we can turn this into a use-able value'''
-        # print(int(torch.argmax(result.logits))+1)
         '''Here, take the highest value and print the representative value by adding 1 to the position of the tensor'''
         return int(torch.argmax(result.logits))+1
 
@@ -77,6 +38,8 @@ class Sentiment:
 
         with open('data.json', 'r') as json_file:
             corpus = json.load(json_file)['Sentences']
+
+        # ----------------------------------------
 
         sentences = [x for para in corpus for x in sent_tokenize(para)]
         '''We are removing sentences above 512 characters since the BERT model would only take in sentences less than 512 
@@ -94,7 +57,6 @@ class Sentiment:
     # ----------- Model Training ----------- #
 
     # Data PreProcessing
-
     def data_cleaning(self, sent):
         texts = sent.lower()
         texts = re.sub('[^a-z0-9]', ' ', texts)
@@ -114,7 +76,7 @@ class Sentiment:
         x = model_data['stemmed_data'].values
         y = model_data['Sentiment'].values
 
-        X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2,stratify=y, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
         # Converting textual data into numerical data
         vectorizer = TfidfVectorizer()
@@ -122,7 +84,6 @@ class Sentiment:
         X_test = vectorizer.transform(X_test)
 
         # Creating the Logistic Regression model
-
         log_model = MultinomialNB()
         log_model.fit(X_train, y_train)
 
@@ -135,14 +96,6 @@ class Sentiment:
         accuracy_scr = accuracy_score(y_test, X_test_pred)
         print(f'The accuracy of the test model is: {accuracy_scr}')
 
-        while True:
-            match input('Do you want to save the model? ').lower():
-                case 'y':
-                    pickle.dump(log_model, open('SentimentModel.pkl', 'wb'))
-                    pickle.dump(vectorizer, open('Vectorizer.pkl', 'wb'))
-                    break
-                case "n":
-                    break
-                case _:
-                    print('Invalid input, Try again.')
+        return log_model, vectorizer, accuracy, accuracy_scr
+
 

@@ -3,6 +3,7 @@ class RedditClass:
         self.text = "Reddit Initialization"
 
     def redditapi(self):
+        import json
         import praw  # Importing necessary libraries
 
         # --------- Reddit API Cred --------- #
@@ -27,4 +28,5 @@ class RedditClass:
                 for com in post.comments.list():
                     corpus.append(com.body)  # Adding comments to the list
 
-        return corpus
+        with open('data.json', "w", newline='') as json_file:
+            json.dump({'Data': corpus}, json_file)

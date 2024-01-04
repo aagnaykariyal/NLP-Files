@@ -1,9 +1,9 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
-model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
+tokenizer = AutoTokenizer.from_pretrained('cardiffnlp/twitter-roberta-base-sentiment')
+model = AutoModelForSequenceClassification.from_pretrained('cardiffnlp/twitter-roberta-base-sentiment')
 
-tokens = tokenizer.encode('I hate you', return_tensors='pt')
+tokens = tokenizer.encode("I don't like this", return_tensors='pt')
 result = model(tokens)  # This line returns a tensor which consists of the probabilities of all the possibilities of
 # sentiment from 1 to 5.
 print(result)
@@ -11,4 +11,4 @@ print(result)
     sentiment. Lets see how we can turn this into a use-able value'''
 # print(int(torch.argmax(result.logits))+1)
 '''Here we take the highest value and print the representative value by adding 1 to the position of the tensor'''
-# print(int(torch.argmax(result.logits))+1)
+print(int(torch.argmax(result.logits))+1)
