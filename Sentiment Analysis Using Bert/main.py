@@ -2,6 +2,7 @@ import pickle
 import tkinter
 from reddit import RedditClass  # Importing the reddit.py file
 from sentiment import Sentiment  # Importing the required functions from sentiment.py file
+
 sentiment = Sentiment()
 
 root = tkinter.Tk()
@@ -25,6 +26,7 @@ def button_press():
             pickle.dump(model, open('SentimentModel.pkl', 'wb'))
             pickle.dump(vectorizer, open('Vectorizer.pkl', 'wb'))
             tkinter.Label(root, text="Model has been saved").grid()
+            custom_dialog.destroy()
 
         tkinter.Label(root, text="Model has been trained").grid()
         custom_dialog = tkinter.Toplevel(root)
@@ -64,13 +66,13 @@ def button_press_2():
     prediction = model.predict(document)
     print('Prediction Made')
     match int(prediction[0]):
-        case 1:
+        case 0:
             tkinter.Label(root, text="Negative Sentiment").grid()
-        case 2:
+        case 1:
             tkinter.Label(root, text="Neutral Sentiment").grid()
-        case 3:
+        case 2:
             tkinter.Label(root, text="Positive Sentiment").grid()
-    print('Done')
+    print(int(prediction[0]))
 
 
 tkinter.Button(root, text="Get Sentiment", command=button_press_2).grid(row=2, column=0)

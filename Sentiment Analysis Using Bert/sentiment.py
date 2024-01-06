@@ -13,7 +13,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.naive_bayes import MultinomialNB
 import torch
-import pickle
 
 
 class Sentiment:
@@ -25,15 +24,24 @@ class Sentiment:
         self.model = AutoModelForSequenceClassification.from_pretrained('cardiffnlp/twitter-roberta-base-sentiment')
 
     def sentiment(self, sent):
+        """
+        This function is used to pass through a sentence and get the sentiment
+        :param sent: Input Sentence
+        :return: Returns the position of the highest probable value which indicates the sentiment.
+        1 = Negative
+        2 = Neutral
+        3 = Positive
+        """
+
         tokens = self.tokenizer.encode(sent, return_tensors='pt')
         result = self.model(tokens)
-        # Returns a tensor which consists of the probabilities of all the possibilities of sentiment from 1 to 3.
-        '''From printing the result we can see that sentiment 1/bad sentiment has the probability of 3.1262 and is the 
-        highest sentiment. Lets see how we can turn this into a use-able value'''
-        '''Here, take the highest value and print the representative value by adding 1 to the position of the tensor'''
-        return int(torch.argmax(result.logits))+1
+        return int(torch.argmax(result.logits))
 
     def run_sentiments(self):
+        """
+        This function is used to get the sentiment of the entire corpus
+        :return: Saves the created dataframe consisting of sentences and their respective sentiments as a json file
+        """
         # ------------ Loading Data --------------
 
         with open('data.json', 'r') as json_file:
@@ -42,22 +50,26 @@ class Sentiment:
         # ----------------------------------------
 
         sentences = [x for para in corpus for x in sent_tokenize(para)]
-        '''We are removing sentences above 512 characters since the BERT model would only take in sentences less than 512 
-        characters'''
+        # We are removing sentences above 512 characters since the model would only take in 512 characters
         filtered_sentences = [x for x in sentences if len(x) < 512]
 
-        results = []
+        results = {}
         for s in filtered_sentences:
             res = self.sentiment(s)
-            results.append(res)
+            results[filtered_sentences] = res
 
-        sentiments = pd.DataFrame({'Sentences': filtered_sentences, 'Sentiment': results})
+        sentiments = pd.DataFrame(data=results, columns=['Sentence', 'Sentiment'])
         sentiments.to_json('sentiment_data.json', orient='records', lines=True)
 
     # ----------- Model Training ----------- #
 
     # Data PreProcessing
     def data_cleaning(self, sent):
+        """
+        This function cleans sentences with the help of regex. URLs and hashtags are removed.
+        :param sent: Sentence to be cleaned
+        :return: Returns cleaned sentence after Lemmatization
+        """
         texts = sent.lower()
         texts = re.sub('[^a-z0-9]', ' ', texts)
         texts = re.sub(r'http\S+', '', texts)  # Remove URLs
@@ -70,6 +82,10 @@ class Sentiment:
         return ' '.join(words)
 
     def run_model(self):
+        """
+        This function is used to train a Naive Bayes Model for sentiment analysis based on the saved sentiment data
+        :return: Returns the model, vectorizer used, and the accuracy of the train and test sets.
+        """
         model_data = pd.read_json('sentiment_data.json', lines=True)
         model_data['stemmed_data'] = model_data['Sentences'].apply(self.data_cleaning)
 
@@ -90,12 +106,8 @@ class Sentiment:
         # Getting model accuracy
         X_train_pred = log_model.predict(X_train)
         accuracy = accuracy_score(y_train, X_train_pred)
-        print(f'The accuracy score of the training data is: {accuracy}')
 
         X_test_pred = log_model.predict(X_test)
         accuracy_scr = accuracy_score(y_test, X_test_pred)
-        print(f'The accuracy of the test model is: {accuracy_scr}')
 
         return log_model, vectorizer, accuracy, accuracy_scr
-
-

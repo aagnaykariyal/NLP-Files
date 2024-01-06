@@ -2,7 +2,8 @@ class RedditClass:
     def __init__(self):
         self.text = "Reddit Initialization"
 
-    def redditapi(self):
+    @staticmethod
+    def redditapi():
         import json
         import praw  # Importing necessary libraries
 
