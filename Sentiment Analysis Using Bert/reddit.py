@@ -6,11 +6,12 @@ class RedditClass:
     def redditapi():
         import json
         import praw  # Importing necessary libraries
+        from keys import id_key, secret_key
 
         # --------- Reddit API Cred --------- #
         reddit = praw.Reddit(
-            client_id="zw8uC_emsN_GTyOai4v6OQ",
-            client_secret="XJf-l9V2TNGaF9fn6486C0OOEpRplA",
+            client_id = id_key,
+            client_secret = secret_key,
             user_agent="ua"
         )
         # ----------------------------------- #

@@ -69,7 +69,7 @@ def button_press_2():
     print('Prediction Made')
     match int(prediction[0]):
         case 0:
-            customtkinter.CTkLabel(frame, text="Neutral Sentiment").pack()
+            customtkinter.CTkLabel(frame, text="Negative Sentiment").pack()
         case 1:
             customtkinter.CTkLabel(frame, text="Neutral Sentiment").pack()
         case 2:
